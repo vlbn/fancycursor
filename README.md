@@ -1,5 +1,5 @@
 # fancycursor
-✨ fancyCursor component for VUE 3 apps
+✨ yet another fancy cursor VUE 3 component
 
 ### npm i
 ### npm run dev
