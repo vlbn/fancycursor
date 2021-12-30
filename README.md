@@ -1,2 +1,5 @@
 # fancycursor
-✨ fancy cursor component for vue apps
+✨ fancyCursor component for vue apps
+
+### npm i
+### npm run dev
