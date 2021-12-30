@@ -75,7 +75,8 @@ onMounted(() => {
         .reverse();
 
     let theBody = document.querySelector("html");
-    theBody.addEventListener("mousemove", cursorAttach);
+    
+    theBody?.addEventListener("mousemove", cursorAttach);
 
     let x = document.querySelectorAll(".fancyCursor");
     for (let i = 0; i < x.length; i++) {
