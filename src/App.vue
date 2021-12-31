@@ -4,14 +4,14 @@ import FancyCursor from '@/components/FancyCursor.vue';
 
 <template>
 
-  <FancyCursor theme="vlbn" />
+  <FancyCursor />
 
   <div class="centerXY fill-viewport-100">
     <div>
       <h1>
         <small>✨ fancy</small>
         <a href="https://github.com/vlbn/fancycursor">
-          <span class="fancyCursor pointer underline">Cursor</span>
+          <span class="underline">Cursor</span>
         </a>
       </h1>
     </div>
@@ -45,3 +45,69 @@ import FancyCursor from '@/components/FancyCursor.vue';
     </div>
   </div>
 </template>
+
+<style lang="scss">
+
+@import url("https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap");
+
+$green: #42b983;
+$blue: #273849;
+$paper: #f6f6f6;
+$grey: #d4d4d4;
+
+html {
+  overflow: hidden;
+  color: $blue;
+}
+
+a {
+  outline: none !important;
+  color: $blue !important;
+  img {
+    outline: none !important;
+  }
+}
+
+img {
+  border: 0 !important;
+}
+
+body {
+  font-family: "Manjari", sans-serif !important;
+  background-color: $paper;
+  font-weight: 400;
+  color: $blue;
+}
+
+small {
+  font-weight: 400;
+}
+
+strong {
+  color: $green;
+  font-weight: 700;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.centerXY {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
+.underline {
+  text-decoration: underline;
+  -webkit-text-decoration-color: $green; /* Safari */
+  text-decoration-color: $green;
+}
+
+.fill-viewport {
+  &-100 {
+    min-height: 100vh;
+  }
+}
+</style>
