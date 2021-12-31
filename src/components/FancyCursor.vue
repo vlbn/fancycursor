@@ -10,9 +10,12 @@ import { ref, onMounted } from "vue";
 
 interface props {
     theme?: string;
+    trigger?: string;
 }
+
 const props = withDefaults(defineProps<props>(), {
-    theme: "vlbn"
+    theme: "vlbn",
+    trigger: "a",
 });
 
 const cursorA = ref();
@@ -75,10 +78,10 @@ onMounted(() => {
         .reverse();
 
     let theBody = document.querySelector("html");
-    
+
     theBody?.addEventListener("mousemove", cursorAttach);
 
-    let x = document.querySelectorAll(".fancyCursor");
+    let x = document.querySelectorAll(props.trigger);
     for (let i = 0; i < x.length; i++) {
         x[i].addEventListener("mouseover", cursorIn);
         x[i].addEventListener("mouseout", cursorOut);
@@ -90,6 +93,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+
 // fancy colors
 $green: #42b983;
 $blue: #273849;
