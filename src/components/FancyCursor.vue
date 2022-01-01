@@ -150,7 +150,10 @@ onMounted(() => {
         }, ">")
         .reverse();
 
-    /*
+    /* 
+        the code below this block creates the canvas smoke
+        and was written by Pavel Dobryakov
+  
     MIT License
     Copyright (c) 2017 Pavel Dobryakov
     Permission is hereby granted, free of charge, to any person obtaining a copy

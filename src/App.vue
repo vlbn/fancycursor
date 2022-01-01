@@ -109,6 +109,7 @@ strong {
     align-items: center;
     justify-content: center;
     flex-flow: column wrap;
+    text-align: center;
 }
 
 .underline {
