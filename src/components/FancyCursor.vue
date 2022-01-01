@@ -60,6 +60,18 @@ const cursorAttach = ($event: { clientX: any; clientY: any; }) => {
 }
 
 onMounted(() => {
+
+    window.addEventListener("mousemove", cursorAttach);
+
+    let x = document.querySelectorAll(props.trigger);
+
+    for (let i = 0; i < x.length; i++) {
+        x[i].addEventListener("mouseover", cursorIn);
+        x[i].addEventListener("mouseout", cursorOut);
+        x[i].addEventListener("click", cursorOut);
+        x[i].addEventListener("mousedown", cursorOut);
+    }
+
     fancyTl = gsap
         .timeline()
         .to(".cursor-a", {
@@ -77,17 +89,6 @@ onMounted(() => {
         }, ">")
         .reverse();
 
-    let theBody = document.querySelector("html");
-
-    theBody?.addEventListener("mousemove", cursorAttach);
-
-    let x = document.querySelectorAll(props.trigger);
-    for (let i = 0; i < x.length; i++) {
-        x[i].addEventListener("mouseover", cursorIn);
-        x[i].addEventListener("mouseout", cursorOut);
-        x[i].addEventListener("click", cursorOut);
-        x[i].addEventListener("mousedown", cursorOut);
-    }
 })
 
 </script>
