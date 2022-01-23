@@ -19,8 +19,8 @@ begginer dev. i try to be as much descriptive as possible */
 // @ts-nocheck
 
 /* only the essential is imported from VUE. -ref- for creating
-reactive variables and lifecycle hook -onMounted- */
-import { ref, onMounted } from "vue";
+reactive variables and lifecycle hooks -onMounted- and -onBeforeUnmount- */
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 /* GSAP top animation library */
 import { gsap } from "gsap";
@@ -133,6 +133,11 @@ onMounted(() => {
         fanciness();
     }
 
+})
+
+onBeforeUnmount(() => {
+    /* we remove the event listener */
+    window.removeEventListener("mousemove", cursorAttach);
 })
 
 /* the code below this block creates the canvas
