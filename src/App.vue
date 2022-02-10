@@ -1,5 +1,6 @@
-<script setup lang="ts">
-import FancyCursor from "@/components/FancyCursor.vue";
+<script setup>
+import FancyCursor from './components/FancyCursor.vue';
+
 </script>
 
 <template>
@@ -7,7 +8,6 @@ import FancyCursor from "@/components/FancyCursor.vue";
     <FancyCursor />
 
     <section class="centerXY fill-viewport-100">
-
         <h1>
             <small>✨ fancy</small>
             <a href="https://github.com/vlbn/fancycursor">
@@ -16,8 +16,7 @@ import FancyCursor from "@/components/FancyCursor.vue";
         </h1>
 
         <p>
-            yet another fancy cursor
-            <strong>VUE 3</strong> component
+            cursor component made with <strong>gsap & vue </strong>
         </p>
 
         <figure>
@@ -40,18 +39,15 @@ import FancyCursor from "@/components/FancyCursor.vue";
                 </svg>
             </a>
         </figure>
-
     </section>
 </template>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap");
-
 $green: #42b983;
 $blue: #273849;
 $paper: #f6f6f6;
 $grey: #d4d4d4;
-
 html {
     overflow: hidden;
     color: $blue;
@@ -61,8 +57,8 @@ html {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    word-spacing: .2rem;
 }
-
 a {
     outline: none !important;
     color: $blue !important;
@@ -70,11 +66,9 @@ a {
         outline: none !important;
     }
 }
-
 img {
     border: 0 !important;
 }
-
 body {
     font-family: "Manjari", sans-serif !important;
     background-color: $paper;
@@ -82,20 +76,16 @@ body {
     color: $blue;
     margin: 0px;
 }
-
 small {
     font-weight: 400;
 }
-
 strong {
     color: $green;
     font-weight: 700;
 }
-
 .pointer {
     cursor: pointer;
 }
-
 .centerXY {
     display: flex;
     align-items: center;
@@ -103,13 +93,11 @@ strong {
     flex-flow: column wrap;
     text-align: center;
 }
-
 .underline {
     text-decoration: underline;
     -webkit-text-decoration-color: $green; /* Safari */
     text-decoration-color: $green;
 }
-
 .fill-viewport {
     &-100 {
         min-height: 100vh;

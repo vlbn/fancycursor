@@ -1,5 +1,5 @@
-# fancycursor
-✨ yet another fancy cursor VUE 3 component
+## fancycursor
+✨ cursor component made with gsap & vue
 
-### npm i
-### npm run dev
+#### npm i
+#### npm run dev
